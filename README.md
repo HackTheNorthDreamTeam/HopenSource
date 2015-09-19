@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Rails Omniauth
 ================
 
@@ -48,3 +49,7 @@ Credits
 
 License
 -------
+=======
+# HopenSource
+hopensource description
+>>>>>>> bb21462f687791e93b1c88bf7ce73f18d98d30b6
