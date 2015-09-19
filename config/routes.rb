@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :organizations
   resources :users
   root to: 'visitors#index'
   get '/auth/:provider/callback' => 'sessions#create'
