@@ -26,9 +26,9 @@ gem 'unicorn-rails'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'dropbox-sdk'
-gem 'better_errors'
+
 group :development do
-  
+  gem 'better_errors'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
