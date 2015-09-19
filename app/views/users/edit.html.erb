@@ -1,7 +1,7 @@
 <h1>Editing User</h1>
 
 <%= form_tag url: "/developer/#{@user.id}/upload", method: :post, multipart: true do %>
-	<%= file_field_tag "Profile Picture", :image %>
+	<%= file_field_tag :image %>
 	<%= submit_tag %>
 <%end%>
 
