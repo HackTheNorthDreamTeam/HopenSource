@@ -23,6 +23,8 @@ gem 'pg'
 gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'faraday'
+gem 'faraday_middleware'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
