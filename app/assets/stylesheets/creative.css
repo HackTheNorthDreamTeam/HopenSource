@@ -10,10 +10,6 @@ body {
     height: 100%;
 }
 
-body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-}
-
 hr {
     max-width: 50px;
     border-color: #f05f40;
@@ -172,7 +168,10 @@ aside {
     }
 }
 
-header {
+/*******************************
+	Landing Page Styles
+**********************************/
+body {
     position: relative;
     width: 100%;
     min-height: auto;
@@ -180,31 +179,36 @@ header {
     color: #fff;
     background-image: url(../header.jpg);
     background-position: center;
+    
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+       -moz-background-size: cover;     
+	   	 -o-background-size: cover;
+	   	 	background-size: cover;
 }
 
-header .header-content {
+body .main-header h1 {
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+}
+.main-header .header-content {
     position: relative;
     width: 100%;
     padding: 100px 15px;
     text-align: center;
 }
 
-header .header-content .header-content-inner h1 {
+.main-header .header-content .header-content-inner h1 {
+	color: #fff;
     margin-top: 0;
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-header .header-content .header-content-inner hr {
+.main-header .header-content .header-content-inner hr {
     margin: 30px auto;
 }
 
-header .header-content .header-content-inner p {
+.main-header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
@@ -212,11 +216,11 @@ header .header-content .header-content-inner p {
 }
 
 @media(min-width:768px) {
-    header {
+    .main-header {
         min-height: 100%;
     }
 
-    header .header-content {
+    .main-header .header-content {
         position: absolute;
         top: 50%;
         padding: 0 50px;
@@ -225,13 +229,13 @@ header .header-content .header-content-inner p {
         transform: translateY(-50%);
     }
 
-    header .header-content .header-content-inner {
+    .main-header .header-content .header-content-inner {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
     }
 
-    header .header-content .header-content-inner p {
+    .main-header .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
