@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150920002102) do
     t.string   "email",      default: "", null: false
     t.text     "bio"
     t.text     "skills"
-    t.text     "image_url",               null: false
+    t.text     "image_url"
   end
 
 end
