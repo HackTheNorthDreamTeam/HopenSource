@@ -32,8 +32,9 @@ class Project < ActiveRecord::Base
     response = @connection.post do |req|
       req.headers['Content-Type'] = 'application/json'
       req.url("/v1/me/binders?access_token=#{access_token}")
-      req.body = '{ "name": "Unagi" }'
+      req.body = "{ \"name\": #{name}}"
     end
-    json_response.body
+    moxtra_binder = json_response.body["data"]["id"]
+    save!
 	end
 end
