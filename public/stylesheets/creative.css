@@ -492,3 +492,6 @@ body {
 .sk-msg-avatar {
     display:inline !important;
 }
+.sk-logo {
+    text-align: start !important;
+}
