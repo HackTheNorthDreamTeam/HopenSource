@@ -3,7 +3,7 @@ class AddUserInformation < ActiveRecord::Migration
   	add_column :users, :email, :string, null: true
   	add_column :users, :bio, :text, null: true
   	add_column :users, :skills, :text, null: true
-  	add_column :users, :image_url, :text, null: false
+  	add_column :users, :image_url, :text, null: true
   end
 
   def down
