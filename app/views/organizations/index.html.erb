@@ -4,10 +4,13 @@
 <br/> <br/>
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
-        <div class="row no-gutter">
+        <div class="row no-gutter text-center">
 	        
 	        <% if @organization.projects.empty? %>
-	        	<a href=<%= new_project_path %> class="btn btn-success">Register Your first Project</a>
+	        	<div style="margin-top: 50px;">
+		        	<h3 style="margin-bottom: 20px"> It looks like this organization has no projects listed</h3>
+	        		<a href=<%= new_project_path %> class="btn btn-success">Register Your first Project</a>
+	        	</div>
 	        <% end %>
 		        
 	        <% @organization.projects.each do |project| %>
