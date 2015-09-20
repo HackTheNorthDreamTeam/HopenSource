@@ -32,10 +32,17 @@ class Project < ActiveRecord::Base
       req.url("/v1/me/binders?access_token=#{access_token}")
       req.body = "{ \"name\": \"name\"}"
     end
+    binding.pry
     moxtra_binder = response.body["data"]["id"]
     save!
 	end
   def authenticate_project
+    @connection = Faraday.new(:url => "https://apisandbox.moxtra.com/oauth/token", :ssl => {:verify => false}) do |faraday|
+      faraday.request  :url_encoded             # form-encode POST params
+      faraday.response :json, :content_type => /\bjson$/
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
+    
     token_response = @connection.post do |req|
       req.url("/oauth/token")
       req.params =  { client_id: ENV['MOXTRA_CLIENT_ID'],

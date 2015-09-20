@@ -57,9 +57,9 @@ var start_moxtra = function(token,binder_id){
   init(token);
   start_chat(binder_id);
 }
-<% if current_user? %>
-	start_moxtra(current_user.authenticate_user, @project.moxtra_binder)
+<% if current_user %>
+	start_moxtra("<%=@project.authenticate_user%>", "<%=@project.moxtra_binder%>")
 <% elsif current_organization %>
-	start_moxtra("<%=current_organization.authenticate_project%>", "<%=@project.moxtra_binder%>)
+	start_moxtra("<%=@project.authenticate_project%>", "<%=@project.moxtra_binder%>")
 <% end %>
 </script>
