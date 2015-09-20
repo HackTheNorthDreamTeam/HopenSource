@@ -1,7 +1,7 @@
 <%= simple_form_for @user, url: "/developers/#{@user.id}/update", method: :post do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs" style="color: black">
   	<%= f.input :name, label: 'Name', required: true %>
   	<%= f.input :email, label: 'Email' %>
   	<%= f.input :bio, label: 'Bio' %>
