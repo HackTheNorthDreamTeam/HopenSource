@@ -37,4 +37,15 @@ class Project < ActiveRecord::Base
     moxtra_binder = json_response.body["data"]["id"]
     save!
 	end
+  def authenticate_project
+    token_response = @connection.post do |req|
+      req.url("/oauth/token")
+      req.params =  { client_id: ENV['MOXTRA_CLIENT_ID'],
+                      client_secret: ENV['MOXTRA_CLIENT_SECRET'],
+                      grant_type: "http://www.moxtra.com/auth_uniqueid",
+                      uniqueid: 'O' + id.to_s,
+                      timestamp: DateTime.now.strftime('%Q'),
+                      firstname: organization.name }
+    end
+  end
 end
