@@ -27,11 +27,12 @@ class Project < ActiveRecord::Base
       								firstname: organization.name }
     end
 
-    access_token = JSON.parse(token_response.body)["access_token"]
+    access_token = token_response.body["access_token"]
 
     response = @connection.post do |req|
-      req.url("/oauth/token")
-      req.params =  { access_token: access_token, name: name }
+      req.headers['Content-Type'] = 'application/json'
+      req.url("/v1/me/binders?access_token=#{access_token}")
+      req.body = '{ "name": "Unagi" }'
     end
     json_response.body
 	end
