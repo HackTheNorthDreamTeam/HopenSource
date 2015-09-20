@@ -46,16 +46,39 @@
                   <div class="row">
                       <div class="col-lg-3 col-md-6 text-center">
                           <div class="service-box">
-                              <i class="fa fa-9x fa-wechat wow bounceIn text-primary" style="font-size: 9em;"></i>
-                              <h3>Chat with Developers</h3>
-                              <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                              <a href="#" data-toggle="modal" data-target="#basicModal">
+                                <i class="fa fa-9x fa-wechat wow bounceIn text-primary" style="font-size: 9em;"></i>
+                                <h3>Chat with Developers</h3>
+                              </a>
+
+                              <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+                                                  <div class="col-sm-2">
+                                                     <img src="img/portfolio/shruti.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <h4 class="modal-title" id="myModalLabel">CrazyDev1337</h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <h3>Insert Moxtra shit here</h3>
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn btn-primary" style="font-color:#555; font-size: 20px;">Send</button>
+                                              </div>
+                                          </div>
+                                    </div>
+                              </div>
                           </div>
                       </div>
                       <div class="col-lg-3 col-md-6 text-center">
                           <div class="service-box">
+                            <a href="https://github.com/HackTheNorthDreamTeam">
                               <i class="fa fa-9x fa-github wow bounceIn text-primary" style="font-size: 9em;" data-wow-delay=".1s"></i>
                               <h3>Progress on Github</h3>
-                              <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                            </a>
+                              <!--p class="text-muted">You can use this theme as is, or you can make changes!</p-->
                           </div>
                       </div>
 
@@ -176,15 +199,27 @@
                                     <div class="project-category text-faded">
                                         Find more contributors
                                     </div>
-                                    <p> HOURS: 3 /week </p>
                                 </div>
                             </div>
                         </a>
                     </div>
                   </div>
-
               </div>
-
           </section>
+
+          <!-- jQuery -->
+          <script src="js/jquery.js"></script>
+
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.js"></script>
+
+          <!-- Plugin JavaScript -->
+          <script src="js/jquery.easing.min.js"></script>
+          <script src="js/jquery.fittext.js"></script>
+          <script src="js/wow.min.js"></script>
+
+          <!-- Custom Theme JavaScript -->
+          <script src="js/creative.js"></script>
+
 </body>
 </html>

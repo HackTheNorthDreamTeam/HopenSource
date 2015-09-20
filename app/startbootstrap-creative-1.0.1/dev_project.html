@@ -34,7 +34,7 @@
 
 </head>
 
-<body style="background-color: #000; color: #fff;">
+<body style="background-color: #FFFFe0; color: #000;">
 
   <center> <h1> Doctors without Borders App Design </h1> </center>
   <div style="width:100%">
@@ -82,8 +82,10 @@
 
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box">
-            <i class="fa fa-9x fa-Github wow bounceIn text-primary" data-wow-delay=".3s"></i>
-            <h3>Github</h3>
+            <a href="https://github.com/HackTheNorthDreamTeam">
+              <i class="fa fa-9x fa-Github wow bounceIn text-primary" data-wow-delay=".3s"></i>
+              <h3>Github</h3>
+            </a>
             <p class="text-muted">Go to Github Repository</p>
           </div>
         </div>
@@ -118,19 +120,48 @@
         <h4 style="color: #999966"> Labores imperdiet te vel, sed id sumo reformidans. An facete adipisci intellegam nec, ut adhuc eirmod neglegentur vis.  </h4>
         <div class="col-lg-1 col-md-12 text-center">
           <div class="service-box">
-            <i class="fa fa-5x fa-wechat wow bounceIn text-primary" data-wow-delay=".3s"></i>
-            <h3>Chat</h3>
+            <a href="#" data-toggle="modal" data-target="#basicModal">
+                <i class="fa fa-5x fa-wechat wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                <h3>Chat</h3>
+            </a>
+
+            <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                  <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+                                <div class="col-sm-2">
+                                   <img src="img/portfolio/04.jpg" class="img-responsive" alt="">
+                                </div>
+                                <h4 class="modal-title" id="myModalLabel" style="color:black;">DoctorsWithoutBorders</h4>
+                            </div>
+                            <div class="modal-body" style="color:black;">
+                                <h3>Insert Moxtra shit here</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" style="font-color:#555; font-size: 20px;">Send</button>
+                            </div>
+                        </div>
+                  </div>
+            </div>
+
           </div>
         </div>
     </div>
 
-<!--//proj name
-    //project desc
-    //organization shit
-    //progress stats
-    //github
-    //moxtra shit-->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
 
 </body>
 
