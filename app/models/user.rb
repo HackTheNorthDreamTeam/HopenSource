@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   end
 
   def profile_picture
-    client = DropboxClient(ENV[DROPBOX_TOKEN])
+    client = DropboxClient(ENV["DROPBOX_TOKEN"])
     client.get_file("/u#{@user.id}")
   end
 end
