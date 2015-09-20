@@ -1,14 +1,3 @@
-<%= simple_form_for @user, url: "/developers/#{@user.id}/update", method: :post do |f| %>
-  <%= f.error_notification %>
-  <%= @user.attributes %>
-  <!-- <div class="form-inputs">
-  	<%#= f.input :name, label: 'Name', required: true %>
-  	<%#= f.input :email, label: 'Email' %>
-  	<%#= f.input :bio, label: 'Bio' %>
-  	<%#= f.input :skills, label: 'Skills' %>
-  </div> -->
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+  <%= @user.attributes %>
+
