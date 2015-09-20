@@ -32,7 +32,6 @@ class Project < ActiveRecord::Base
       req.url("/v1/me/binders?access_token=#{access_token}")
       req.body = "{ \"name\": \"name\"}"
     end
-    binding.pry
     moxtra_binder = response.body["data"]["id"]
     save!
 	end
@@ -50,7 +49,8 @@ class Project < ActiveRecord::Base
                       grant_type: "http://www.moxtra.com/auth_uniqueid",
                       uniqueid: 'O' + id.to_s,
                       timestamp: DateTime.now.strftime('%Q'),
-                      firstname: organization.name }
+                      firstname: name }
     end
-  end
+	 token_response.body["access_token"]
+ end
 end
