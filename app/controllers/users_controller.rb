@@ -24,6 +24,6 @@ class UsersController < ApplicationController
   def upload
     @user = User.find(params[:id])
     client = DropboxClient.new(ENV["DROPBOX_TOKEN"])
-    client.put_file("/u#{@user.id}", params[:image],true)
+    client.put_file("/u#{@user.id}", params[:image].read,true)
   end
 end
