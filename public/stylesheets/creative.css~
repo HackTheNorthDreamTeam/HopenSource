@@ -190,6 +190,11 @@ body {
 body .main-header h1 {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
+
+.main{
+    padding-bottom:0px;
+}
+
 .main-header .header-content {
     position: relative;
     width: 100%;
