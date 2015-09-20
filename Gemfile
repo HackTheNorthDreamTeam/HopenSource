@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
+gem 'raygun4ruby'
 group :development, :test do
   gem 'byebug'
 end
@@ -26,6 +27,7 @@ gem 'unicorn-rails'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'dropbox-sdk'
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
