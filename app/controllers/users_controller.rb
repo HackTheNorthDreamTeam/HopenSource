@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   	permitted = params.require(:user).permit(:name, :email, :bio, :skills)
   	@user = User.find(params[:id])
   	@user.update!(permitted)
+    redirect_to :back
   end
 
   def upload
