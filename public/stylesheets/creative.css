@@ -172,7 +172,7 @@ aside {
 /*******************************
 	Landing Page Styles
 **********************************/
-body {
+body .main-header {
     position: relative;
     width: 100%;
     min-height: auto;
