@@ -486,9 +486,9 @@ body {
 }
 
 .sk-container {
-    box-sizing: content-box;
-    text-align: start;
+    box-sizing: content-box !important;
+    text-align: start !important;
 }
 .sk-msg-avatar {
-    display:inline;
+    display:inline !important;
 }
