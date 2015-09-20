@@ -1,6 +1,7 @@
-<h2>Sign up</h2>
+
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <legend id="signup-form">Sign up</legend>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -11,7 +12,8 @@
 
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
+    <div class="btn btn-default">
+    <%= render "devise/shared/links" %>
+    </div>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
