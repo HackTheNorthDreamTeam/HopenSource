@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Omniauth" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "(H)open Source" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag 'creative', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <style>
-		/*!
+/*!
  * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -18,8 +6,9 @@
 
 html,
 body {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
+    overflow-x:hidden;
 }
 
 hr {
@@ -201,6 +190,11 @@ body {
 body .main-header h1 {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
+
+main{
+    padding-bottom:0px;
+}
+
 .main-header .header-content {
     position: relative;
     width: 100%;
@@ -403,7 +397,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
     border-color: #f05f40;
     color: #fff;
-    background-color: #66ff66;
+    background-color: #f05f40;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -489,18 +483,16 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
-}    
-	</style>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-    <script src="https://cdn.supportkit.io/supportkit.min.js"></script>
-    <script>SupportKit.init({appToken: '9idmzrr0rqu8pbxv9jyjts92p'});</script>
-  </body>
-</html>
+    text-align: start !important;
+}
+
+.sk-container {
+    box-sizing: content-box !important;
+    text-align: start !important;
+}
+.sk-msg-avatar {
+    display:inline !important;
+}
+.sk-logo {
+    text-align: start !important;
+}
