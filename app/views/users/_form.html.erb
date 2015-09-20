@@ -1,6 +1,6 @@
 <%= simple_form_for @user, url: "/developers/#{@user.id}/update", method: :post do |f| %>
   <%= f.error_notification %>
-
+  <% raise Exception(@user) %>
   <div class="form-inputs">
   	<%= f.input :name, label: 'Name', required: true %>
   	<%= f.input :email, label: 'Email' %>
