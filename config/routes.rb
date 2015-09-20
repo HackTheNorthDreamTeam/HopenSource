@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/developer/:id/dash' => 'users#index'
   get '/developer/:id/settings' => 'users#edit'
   post '/developer/:id/update' => 'users#update'
+  post '/developer/:id/upload' => 'users#upload'
 
   #organizationland
   get '/organization/:id' => 'organizations#show'
