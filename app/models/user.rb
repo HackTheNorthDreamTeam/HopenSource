@@ -1,4 +1,6 @@
+require 'dropbox_sdk'
 class User < ActiveRecord::Base
+  has_many :memberships
 	has_many :projects, through: :memberships, foreign_key: 'user_id', class_name: 'Project', source: :project
 
   def self.create_with_omniauth(auth)
@@ -12,7 +14,7 @@ class User < ActiveRecord::Base
   end
 
   def profile_picture
-    client = DropboxClient(ENV[DROPBOX_TOKEN])
+    client = DropboxClient.new(ENV["DROPBOX_TOKEN"])
     client.get_file("/u#{@user.id}")
   end
 end
