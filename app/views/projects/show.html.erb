@@ -2,3 +2,59 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+<script type="text/javascript" src="https://www.moxtra.com/api/js/moxtra-latest.js" id="moxtrajs"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+var CLIENT_ID = "nr7CpZVtprs";
+
+function init(token) {
+    var options = {
+      mode: "sandbox", //for production environment change to "production"
+      client_id: CLIENT_ID,
+      access_token: token, //valid access token from user authentication
+      invalid_token: function(event) {
+        alert("Access Token expired for session id: " + event.session_id);
+      }
+    };
+
+    Moxtra.init(options);
+}
+
+var start_chat = function(binder_id){
+  var options = {
+    binder_id: binder_id,
+    iframe: true,
+    tagid4iframe: "container",
+    iframewidth: "920px",
+    iframeheight: "650px",
+    autostart_meet: true,
+    autostart_note: false,
+    start_chat: function(event) {
+        console.dir("Chat started session Id: " + event.session_id);
+    },
+    start_meet: function(event) {
+        console.dir("Meet started session key: " + event.session_key + " session id: " + event.session_id);
+    },
+    end_meet: function(event) {
+        console.dir("Meet end event");
+    },
+    invite_member: function(event) {
+        console.dir("Invite member into binder Id: " + event.binder_id);
+    },
+    request_note: function(event) {
+        console.dir("Note start request");
+    },
+    error: function(event) {
+        console.error("Chat error code: " + event.error_code + " error message: " + event.error_message);
+    }
+  };
+  Moxtra.chat(options);
+}
+
+var start_moxtra = function(token,binder_id){
+  init(token);
+  start_chat(binder_id);
+}
+</script>
