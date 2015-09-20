@@ -25,5 +25,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     client = DropboxClient.new(ENV["DROPBOX_TOKEN"])
     client.put_file("/u#{@user.id}", params[:image].read,true)
+    redirect_to :back
   end
 end
