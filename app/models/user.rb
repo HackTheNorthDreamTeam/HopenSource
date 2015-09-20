@@ -1,3 +1,4 @@
+require 'dropbox_sdk'
 class User < ActiveRecord::Base
 	has_many :projects, through: :memberships, foreign_key: 'user_id', class_name: 'Project', source: :project
 

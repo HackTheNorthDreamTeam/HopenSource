@@ -1,3 +1,4 @@
+require 'dropbox_sdk'
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
