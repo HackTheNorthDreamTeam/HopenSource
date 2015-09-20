@@ -1,3 +1,35 @@
-<% @projects.each do |project| %>
-  project
-<% end %>
+<section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <% @projects.each do |project| %>
+				<div class="col-lg-4 col-sm-6">
+                	<a href="#" class="portfolio-box">
+                    	<img src="img/portfolio/01.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+                        	<div class="portfolio-box-caption-content">
+                            	<div class="project-category text-faded">
+                                	Global Warming
+                            	</div>
+                            <div class="project-name">
+                                Create a Volunteering App
+                            </div>
+                            <br/> <br/>
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                              aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                                20%
+                              </div>
+                            </div>
+                            <p> HOURS LEFT: 167 </p>
+                        	</div>
+                    	</div>
+                	</a>
+            	</div>
+			<% end %>
+
+        </div>
+        <div class="row text-center">
+        <a style="margin-top: 20px;" class="btn btn-default" href="#">Back</a>
+        </div>
+    </div>
+</section>
