@@ -484,3 +484,11 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+.sk-container {
+    box-sizing: content-box;
+    text-align: start;
+}
+.sk-msg-avatar {
+    display:inline;
+}
